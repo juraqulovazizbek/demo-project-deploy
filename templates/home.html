@@ -1,0 +1,211 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        dark: "#0f172a"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-primary">YourBrand</h1>
+
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#features" class="hover:text-primary transition">Features</a>
+            <a href="#about" class="hover:text-primary transition">About</a>
+            <a href="#pricing" class="hover:text-primary transition">Pricing</a>
+            <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <a href="#contact"
+           class="hidden md:inline-block bg-primary text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+            Get Started
+        </a>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="pt-32 pb-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-dark">
+                Build Scalable & Modern Web Applications
+            </h2>
+
+            <p class="mt-6 text-lg text-gray-600">
+                Production-ready solutions built with performance,
+                scalability and maintainability in mind.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="#contact"
+                   class="bg-primary text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+                    Start Now
+                </a>
+                <a href="#features"
+                   class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="hidden md:block">
+            <img src="{% static "images/image.png" %}"
+                 alt="Hero Image"
+                 class="rounded-2xl shadow-lg">
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <h3 class="text-3xl font-bold text-dark">Core Features</h3>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Designed with engineering excellence and scalability in mind.
+        </p>
+
+        <div class="mt-16 grid md:grid-cols-3 gap-10">
+
+            <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+                <h4 class="text-xl font-semibold">High Performance</h4>
+                <p class="mt-4 text-gray-600">
+                    Optimized architecture and efficient data handling for fast response times.
+                </p>
+            </div>
+
+            <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+                <h4 class="text-xl font-semibold">Secure by Design</h4>
+                <p class="mt-4 text-gray-600">
+                    Built with authentication, authorization, and secure patterns.
+                </p>
+            </div>
+
+            <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+                <h4 class="text-xl font-semibold">Scalable Architecture</h4>
+                <p class="mt-4 text-gray-600">
+                    Easily extendable microservice-ready infrastructure.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+            <img src="{% static "images/image2.png" %}"
+                 alt="About"
+                 class="rounded-2xl shadow-lg">
+        </div>
+
+        <div>
+            <h3 class="text-3xl font-bold text-dark">Why Choose Us?</h3>
+            <p class="mt-6 text-gray-600 leading-relaxed">
+                We focus on maintainable architecture, clean code principles,
+                and long-term system sustainability.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+        <h3 class="text-3xl font-bold text-dark">Pricing</h3>
+
+        <div class="mt-16 grid md:grid-cols-3 gap-8">
+
+            <div class="border p-8 rounded-2xl">
+                <h4 class="text-xl font-semibold">Starter</h4>
+                <p class="mt-4 text-3xl font-bold">$19</p>
+                <ul class="mt-6 space-y-3 text-gray-600">
+                    <li>Basic Features</li>
+                    <li>Email Support</li>
+                </ul>
+            </div>
+
+            <div class="border-2 border-primary p-8 rounded-2xl shadow-lg">
+                <h4 class="text-xl font-semibold">Professional</h4>
+                <p class="mt-4 text-3xl font-bold">$49</p>
+                <ul class="mt-6 space-y-3 text-gray-600">
+                    <li>All Starter Features</li>
+                    <li>Priority Support</li>
+                </ul>
+            </div>
+
+            <div class="border p-8 rounded-2xl">
+                <h4 class="text-xl font-semibold">Enterprise</h4>
+                <p class="mt-4 text-3xl font-bold">$99</p>
+                <ul class="mt-6 space-y-3 text-gray-600">
+                    <li>Full Access</li>
+                    <li>Dedicated Support</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-20 bg-dark text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <h3 class="text-3xl font-bold">Let’s Work Together</h3>
+
+        <form class="mt-10 grid gap-6">
+            <input type="text"
+                   placeholder="Your Name"
+                   class="p-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary" />
+
+            <input type="email"
+                   placeholder="Email Address"
+                   class="p-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary" />
+
+            <textarea rows="4"
+                      placeholder="Your Message"
+                      class="p-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+
+            <button type="submit"
+                    class="bg-primary py-3 rounded-lg hover:bg-blue-700 transition">
+                Send Message
+            </button>
+        </form>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-6 text-center text-sm text-gray-500">
+    © 2026 YourBrand. All rights reserved.
+</footer>
+
+</body>
+</html>
